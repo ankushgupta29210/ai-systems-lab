@@ -1,36 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Privacy Policy | AI Systems Lab</title>
-    <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 2rem; max-width: 800px; margin: auto; background: #030712; color: #E5E7EB; }
-        h1, h2 { color: #38BDF8; }
-        .contact { background: rgba(56, 189, 248, 0.1); padding: 1rem; border-radius: 8px; border: 1px solid #38BDF8; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palper Privacy Policy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#030712;
+color:#E5E7EB;
+padding:40px 20px;
+line-height:1.7;
+max-width:900px;
+margin:auto;
+}
+
+h1{
+color:#38BDF8;
+margin-bottom:10px;
+}
+
+h2{
+margin-top:30px;
+color:#22D3EE;
+}
+
+p{
+margin-top:10px;
+color:#CBD5E1;
+}
+
+.card{
+background:rgba(0,255,255,0.03);
+border:1px solid rgba(0,255,255,0.15);
+padding:30px;
+border-radius:16px;
+backdrop-filter:blur(20px);
+}
+
+.back{
+display:inline-block;
+margin-top:40px;
+padding:12px 28px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+border:1px solid #38BDF8;
+color:#38BDF8;
+background:rgba(0,255,255,0.08);
+box-shadow:0 0 20px rgba(56,189,248,0.5);
+transition:0.3s;
+}
+
+.back:hover{
+background:#38BDF8;
+color:#030712;
+transform:scale(1.05);
+}
+
+footer{
+margin-top:50px;
+color:#6B7280;
+font-size:14px;
+}
+
+</style>
 </head>
+
 <body>
-    <h1>Privacy Policy for Palper</h1>
-    <p>Last Updated: March 2026</p>
 
-    <p>At <strong>AI Systems Lab</strong>, we believe in radical transparency and absolute user privacy. This policy explains how <strong>Palper</strong> handles your data.</p>
+<div class="card">
 
-    <h2>1. Data Collection & Usage</h2>
-    <p><strong>Palper is an offline-first application.</strong> We do not collect, store, or transmit any of your personal information, passwords, or biometric data to any external servers. All data stays encrypted on your local device.</p>
+<h1>Privacy Policy for Palper</h1>
 
-    <h2>2. Third-Party Services</h2>
-    <p>We do not use any third-party analytics, advertising SDKs, or tracking libraries that collect your data.</p>
+<p><strong>Effective Date:</strong> March 9, 2026</p>
 
-    <h2>3. Security</h2>
-    <p>Your data is protected using industry-standard AES-256 encryption. Since we never touch your data, we cannot reset your Master Password if it is lost.</p>
+<p>Palper is developed by Ankush Gupta as a freemium password vault application. 
+The application provides secure credential storage directly on the user's device and is intended to operate fully offline.</p>
 
-    <h2>4. Children's Privacy</h2>
-    <p>Our services do not address anyone under the age of 13, and we do not knowingly collect personal information from children.</p>
+<h2>Offline and Zero-Knowledge Storage</h2>
 
-    <div class="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, contact us at:<br>
-        <strong>Email:</strong> ankushgupta29210@gmail.com</p>
-    </div>
+<p>Palper is designed to operate completely offline. All passwords, credentials, and secure notes are stored locally on your device's internal storage. 
+The developer does not have access to this information and no vault data is transmitted to external servers.</p>
+
+<h2>Encryption</h2>
+
+<p>All sensitive information stored within Palper is protected using AES-256 encryption. 
+Encryption keys are managed locally using the Android Keystore system. Because encryption keys and master passwords are never stored on external servers, the developer cannot recover your vault data if your master password is lost.</p>
+
+<h2>Biometric Authentication</h2>
+
+<p>Palper may use biometric authentication features provided by the Android operating system, such as fingerprint or face recognition, to unlock the vault. 
+Biometric information is handled entirely by the operating system and is never accessed, collected, or stored by the developer.</p>
+
+<h2>Information Collection</h2>
+
+<p>Palper does not collect, store, transmit, or share personal data, vault information, or device analytics with external servers. All data remains solely on the user's device.</p>
+
+<h2>Payments and Billing</h2>
+
+<p>Palper offers optional premium features through in-app purchases processed by the secure billing infrastructure of Google Play. 
+All payment transactions are handled directly by Google. The developer does not collect or store credit card numbers, banking information, or other financial data.</p>
+
+<h2>Security</h2>
+
+<p>The security of your stored data depends on the security of your device. 
+Users are strongly encouraged to enable device security features such as a lock screen, strong device password, or biometric authentication.</p>
+
+<h2>Changes to This Privacy Policy</h2>
+
+<p>This privacy policy may be updated from time to time. Any updates will be posted on this page and will become effective immediately upon publication.</p>
+
+<h2>Contact</h2>
+
+<p>If you have any questions or suggestions regarding this privacy policy, you may contact the developer.</p>
+
+<p>
+<strong>Developer:</strong> Ankush Gupta<br>
+<strong>Location:</strong> Yellowknife, NT, Canada<br>
+<strong>Email:</strong> ankushguptagfi@gmail.com
+</p>
+
+<a class="back" href="index.html">← Return to AI Systems Lab</a>
+
+</div>
+
+<footer>
+© 2026 Ankush Gupta — AI Systems Lab
+</footer>
+
 </body>
 </html>
