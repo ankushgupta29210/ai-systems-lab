@@ -106,6 +106,15 @@ AI Systems Lab will review the request and explore building a solution.
 
 <form action="https://formsubmit.co/ankushguptagfi@gmail.com" method="POST">
 
+<!-- Redirect after submit -->
+<input type="hidden" name="_next" value="https://ankushgupta29210.github.io/ai-systems-lab/success.html">
+
+<!-- Email subject -->
+<input type="hidden" name="_subject" value="New AI Systems Lab Client Request">
+
+<!-- Disable captcha -->
+<input type="hidden" name="_captcha" value="false">
+
 <label>Your Name</label>
 <input type="text" name="name" required>
 
@@ -142,8 +151,6 @@ AI Systems Lab will review the request and explore building a solution.
 
 <label>Additional details</label>
 <textarea name="details"></textarea>
-
-<input type="hidden" name="_captcha" value="false">
 
 <button type="submit">Submit Request</button>
 
