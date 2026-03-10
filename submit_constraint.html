@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Submit A Constraint | AI Systems Lab</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#030712;
+color:#E5E7EB;
+padding:40px 20px;
+max-width:900px;
+margin:auto;
+}
+
+h1{
+color:#38BDF8;
+margin-bottom:10px;
+}
+
+p{
+color:#9CA3AF;
+margin-bottom:30px;
+}
+
+.card{
+background:rgba(0,255,255,0.03);
+border:1px solid rgba(0,255,255,0.15);
+padding:35px;
+border-radius:16px;
+backdrop-filter:blur(20px);
+}
+
+label{
+display:block;
+margin-top:20px;
+margin-bottom:5px;
+color:#CBD5E1;
+}
+
+input, textarea, select{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:1px solid rgba(255,255,255,0.1);
+background:#020617;
+color:#E5E7EB;
+}
+
+textarea{
+min-height:120px;
+}
+
+button{
+margin-top:30px;
+padding:12px 28px;
+border-radius:40px;
+border:1px solid #38BDF8;
+color:#38BDF8;
+background:rgba(0,255,255,0.08);
+box-shadow:0 0 20px rgba(56,189,248,0.5);
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#38BDF8;
+color:#030712;
+transform:scale(1.05);
+}
+
+.back{
+display:inline-block;
+margin-top:40px;
+color:#38BDF8;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Submit A Constraint</h1>
+
+<p>
+If you're facing a real-world bottleneck and believe software could solve it,
+describe the problem below.  
+AI Systems Lab will review the request and explore building a solution.
+</p>
+
+<form action="https://formsubmit.co/ankushguptagfi@gmail.com" method="POST">
+
+<label>Your Name</label>
+<input type="text" name="name" required>
+
+<label>Email Address</label>
+<input type="email" name="email" required>
+
+<label>What do you need built?</label>
+<select name="project_type" required>
+<option value="">Select</option>
+<option>Mobile App</option>
+<option>Website</option>
+<option>Automation System</option>
+<option>AI Tool</option>
+<option>Something Else</option>
+</select>
+
+<label>Describe the problem</label>
+<textarea name="problem_description" required></textarea>
+
+<label>What features should the system have?</label>
+<textarea name="features"></textarea>
+
+<label>What platform should it run on?</label>
+<select name="platform">
+<option>Android</option>
+<option>iOS</option>
+<option>Website</option>
+<option>Desktop</option>
+<option>Not Sure</option>
+</select>
+
+<label>Estimated timeline (optional)</label>
+<input type="text" name="timeline">
+
+<label>Additional details</label>
+<textarea name="details"></textarea>
+
+<input type="hidden" name="_captcha" value="false">
+
+<button type="submit">Submit Request</button>
+
+</form>
+
+<a class="back" href="index.html">← Return to AI Systems Lab</a>
+
+</div>
+
+</body>
+</html>
