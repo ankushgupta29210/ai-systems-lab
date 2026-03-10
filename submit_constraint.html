@@ -22,7 +22,6 @@ background:#030712;
 color:#E5E7EB;
 display:flex;
 align-items:center;
-/* Changed from height:100vh to min-height to allow scrolling for the long form */
 min-height:100vh;
 flex-direction:column;
 padding:40px 20px;
@@ -55,7 +54,7 @@ to{opacity:1;}
 
 /* Form Container */
 #form-container{
-display:none; /* Hidden initially, revealed by JS */
+display:none; 
 width:100%;
 max-width:900px;
 background:rgba(0,255,255,0.03);
@@ -67,7 +66,6 @@ margin-top:30px;
 opacity: 0;
 }
 
-/* Smooth entry for the form */
 .show-form {
 display: block !important;
 animation: formSlideUp 0.8s ease-out forwards;
@@ -93,6 +91,7 @@ display:block;
 margin-top:20px;
 margin-bottom:5px;
 color:#CBD5E1;
+transition: 0.3s;
 }
 
 input, textarea, select{
@@ -102,6 +101,7 @@ border-radius:10px;
 border:1px solid rgba(255,255,255,0.1);
 background:#020617;
 color:#E5E7EB;
+transition: 0.3s;
 }
 
 textarea{
@@ -142,6 +142,11 @@ transition: 0.2s;
 color: #fff;
 }
 
+/* Helper to hide fields smoothly */
+.hidden-field {
+display: none;
+}
+
 </style>
 </head>
 
@@ -151,12 +156,10 @@ color: #fff;
 
 <div id="form-container">
 
-<h1>Submit A Constraint</h1>
+<h1>Submit Request</h1>
 
-<p>
-If you're facing a real-world bottleneck and believe software could solve it,
-describe the problem below.  
-AI Systems Lab will review the request and explore building a solution.
+<p id="form-description">
+Select what you are looking for below. AI Systems Lab will review the request and get back to you.
 </p>
 
 <form action="https://formsubmit.co/ankushguptagfi@gmail.com" method="POST">
@@ -167,22 +170,24 @@ AI Systems Lab will review the request and explore building a solution.
 <label>Email Address</label>
 <input type="email" name="email" required>
 
-<label>What do you need built?</label>
-<select name="project_type" required>
+<label id="type-label">What are you looking for?</label>
+<select name="project_type" id="project_type" required onchange="adaptForm()">
 <option value="">Select</option>
-<option>Mobile App</option>
-<option>Website</option>
-<option>Automation System</option>
-<option>AI Tool</option>
+<option style="font-weight: bold; color: #38BDF8;">Rent Trading Bot (10% Commission)</option>
+<option>Build a Mobile App</option>
+<option>Build a Website</option>
+<option>Build an Automation System</option>
+<option>Build an AI Tool</option>
 <option>Something Else</option>
 </select>
 
-<label>Describe the problem</label>
-<textarea name="problem_description" required></textarea>
+<label id="problem-label">Describe the problem</label>
+<textarea name="problem_description" id="problem_textarea" required></textarea>
 
-<label>What features should the system have?</label>
-<textarea name="features"></textarea>
+<label id="features-label">What features should the system have?</label>
+<textarea name="features" id="features_textarea"></textarea>
 
+<div id="platform-group">
 <label>What platform should it run on?</label>
 <select name="platform">
 <option>Android</option>
@@ -191,16 +196,19 @@ AI Systems Lab will review the request and explore building a solution.
 <option>Desktop</option>
 <option>Not Sure</option>
 </select>
+</div>
 
+<div id="timeline-group">
 <label>Estimated timeline (optional)</label>
 <input type="text" name="timeline">
+</div>
 
 <label>Additional details</label>
 <textarea name="details"></textarea>
 
 <input type="hidden" name="_captcha" value="false">
 
-<button type="submit">Transmit Constraint</button>
+<button type="submit" id="submit-btn">Transmit Request</button>
 
 </form>
 
@@ -209,13 +217,13 @@ AI Systems Lab will review the request and explore building a solution.
 </div>
 
 <script>
-
+// --- Terminal Animation ---
 const lines = [
-"> Incoming Constraint Detected...",
-"> Initializing Analyzer...",
+"> Incoming Request Detected...",
+"> Initializing Interface...",
 "> Scanning Parameters...",
-"> Evaluating Feasibility...",
-"> Preparing Submission Interface..."
+"> Establishing Secure Connection...",
+"> Ready for Input."
 ]
 
 const terminal = document.getElementById("terminal")
@@ -226,14 +234,55 @@ lines.forEach((text,index)=>{
         div.className = "line"
         div.textContent = text
         terminal.appendChild(div)
-    }, index * 900)
+    }, index * 800)
 })
 
-// Trigger the form to appear with a smooth animation after the terminal text finishes
 setTimeout(()=>{
     document.getElementById("form-container").classList.add("show-form")
-}, lines.length * 900 + 800)
+}, lines.length * 800 + 600)
 
+// --- Smart Form Logic ---
+function adaptForm() {
+    const type = document.getElementById("project_type").value;
+    
+    const problemLabel = document.getElementById("problem-label");
+    const problemTextarea = document.getElementById("problem_textarea");
+    
+    const featuresLabel = document.getElementById("features-label");
+    const featuresTextarea = document.getElementById("features_textarea");
+    
+    const platformGroup = document.getElementById("platform-group");
+    const timelineGroup = document.getElementById("timeline-group");
+    const submitBtn = document.getElementById("submit-btn");
+
+    if (type === "Rent Trading Bot (10% Commission)") {
+        // Change text for trading bot customers
+        problemLabel.innerText = "Which bot are you interested in?";
+        problemTextarea.placeholder = "e.g., The Alpaca US Markets Bot, or KAREN for Kraken...";
+        
+        featuresLabel.innerText = "What is your current trading experience level?";
+        featuresTextarea.placeholder = "Briefly describe if you have traded stocks/crypto before...";
+        
+        // Hide developer specific fields
+        platformGroup.classList.add("hidden-field");
+        timelineGroup.classList.add("hidden-field");
+        
+        submitBtn.innerText = "Request Bot Access";
+    } else {
+        // Reset to standard constraint form
+        problemLabel.innerText = "Describe the problem";
+        problemTextarea.placeholder = "";
+        
+        featuresLabel.innerText = "What features should the system have?";
+        featuresTextarea.placeholder = "";
+        
+        // Show developer specific fields
+        platformGroup.classList.remove("hidden-field");
+        timelineGroup.classList.remove("hidden-field");
+        
+        submitBtn.innerText = "Transmit Constraint";
+    }
+}
 </script>
 
 </body>
