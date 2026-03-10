@@ -9,14 +9,20 @@
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
 body{
 background:#030712;
 color:#E5E7EB;
-font-family:'Inter',sans-serif;
-max-width:900px;
-margin:auto;
 padding:40px 20px;
 line-height:1.7;
+max-width:900px;
+margin:auto;
 }
 
 h1{
@@ -25,7 +31,7 @@ margin-bottom:10px;
 }
 
 h2{
-margin-top:35px;
+margin-top:30px;
 color:#22D3EE;
 }
 
@@ -38,24 +44,28 @@ color:#CBD5E1;
 background:rgba(0,255,255,0.03);
 border:1px solid rgba(0,255,255,0.15);
 padding:30px;
-border-radius:14px;
+border-radius:16px;
 backdrop-filter:blur(20px);
 }
 
 .back{
 display:inline-block;
 margin-top:40px;
-padding:10px 22px;
-border-radius:30px;
+padding:12px 28px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
 border:1px solid #38BDF8;
 color:#38BDF8;
-text-decoration:none;
+background:rgba(0,255,255,0.08);
+box-shadow:0 0 20px rgba(56,189,248,0.5);
 transition:0.3s;
 }
 
 .back:hover{
 background:#38BDF8;
 color:#030712;
+transform:scale(1.05);
 }
 
 footer{
@@ -75,37 +85,45 @@ font-size:14px;
 
 <p><strong>Effective Date:</strong> March 9, 2026</p>
 
-<p>Ankush Gupta built the Palper app as a freemium application. This service is provided by Ankush Gupta at no cost for basic features and is intended for use as is.</p>
+<p>Palper is developed by Ankush Gupta as a freemium password vault application. 
+The application provides secure credential storage directly on the user's device and is intended to operate fully offline.</p>
 
-<h2>Zero-Knowledge & Offline Storage</h2>
+<h2>Offline and Zero-Knowledge Storage</h2>
 
-<p>Palper is a fully offline application. Your passwords, credentials, and secure notes are stored completely locally on your device's internal storage. The developer does not have access to your data, and because the app operates entirely offline, no data ever leaves your device.</p>
+<p>Palper is designed to operate completely offline. All passwords, credentials, and secure notes are stored locally on your device's internal storage. 
+The developer does not have access to this information and no vault data is transmitted to external servers.</p>
 
-<h2>Encryption and Protection</h2>
+<h2>Encryption</h2>
 
-<p>All sensitive data within the app is protected using AES-256 encryption. Encryption keys are managed locally through the Android Keystore system. Because the developer does not store your Master Password or encryption keys on external servers, lost credentials cannot be recovered.</p>
+<p>All sensitive information stored within Palper is protected using AES-256 encryption. 
+Encryption keys are managed locally using the Android Keystore system. Because encryption keys and master passwords are never stored on external servers, the developer cannot recover your vault data if your master password is lost.</p>
 
-<h2>Information Collection and Use</h2>
+<h2>Biometric Authentication</h2>
 
-<p>No personal data, vault information, or device statistics are collected, transmitted, or stored on external servers.</p>
+<p>Palper may use biometric authentication features provided by the Android operating system, such as fingerprint or face recognition, to unlock the vault. 
+Biometric information is handled entirely by the operating system and is never accessed, collected, or stored by the developer.</p>
 
-<p>The app may use your device's biometric authentication (such as fingerprint or face recognition) for secure access. This biometric data is handled entirely by the operating system and is never accessed or stored by the developer.</p>
+<h2>Information Collection</h2>
+
+<p>Palper does not collect, store, transmit, or share personal data, vault information, or device analytics with external servers. All data remains solely on the user's device.</p>
 
 <h2>Payments and Billing</h2>
 
-<p>Palper offers an optional Premium upgrade processed through the secure payment infrastructure of <strong>Google Play</strong>. All financial transactions are handled by Google, and the developer does not collect or store payment information such as credit card or banking details.</p>
+<p>Palper offers optional premium features through in-app purchases processed by the secure billing infrastructure of Google Play. 
+All payment transactions are handled directly by Google. The developer does not collect or store credit card numbers, banking information, or other financial data.</p>
 
 <h2>Security</h2>
 
-<p>Your privacy and trust are important. Because your data is stored locally, the security of your information depends on the security of your device. It is strongly recommended to enable device security features such as a strong lock screen or biometric authentication.</p>
+<p>The security of your stored data depends on the security of your device. 
+Users are strongly encouraged to enable device security features such as a lock screen, strong device password, or biometric authentication.</p>
 
 <h2>Changes to This Privacy Policy</h2>
 
-<p>This Privacy Policy may be updated periodically. Users are advised to review this page for any changes. Updates become effective immediately after being posted here.</p>
+<p>This privacy policy may be updated from time to time. Any updates will be posted on this page and will become effective immediately upon publication.</p>
 
 <h2>Contact</h2>
 
-<p>If you have questions or suggestions regarding this Privacy Policy, you may contact the developer.</p>
+<p>If you have any questions or suggestions regarding this privacy policy, you may contact the developer.</p>
 
 <p>
 <strong>Developer:</strong> Ankush Gupta<br>
@@ -113,12 +131,12 @@ font-size:14px;
 <strong>Email:</strong> ankushguptagfi@gmail.com
 </p>
 
-<a class="back" href="index.html">← Back to AI Systems Lab</a>
+<a class="back" href="index.html">← Return to AI Systems Lab</a>
 
 </div>
 
 <footer>
-© 2026 Ankush Gupta
+© 2026 Ankush Gupta — AI Systems Lab
 </footer>
 
 </body>
