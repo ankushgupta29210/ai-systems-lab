@@ -161,6 +161,20 @@ margin:auto;
 font-size:2.3rem;
 margin-bottom:3rem;
 color:#22D3EE;
+text-shadow:0 0 10px rgba(34,211,238,0.6);
+}
+
+/* ================= STATUS BADGE ================= */
+
+.status{
+display:inline-block;
+font-size:12px;
+padding:5px 12px;
+border-radius:20px;
+margin-bottom:15px;
+border:1px solid rgba(56,189,248,0.4);
+color:#38BDF8;
+background:rgba(56,189,248,0.08);
 }
 
 /* ================= GLASS CARD ================= */
@@ -207,7 +221,7 @@ color:#CBD5E1;
 margin-bottom:1rem;
 }
 
-/* ================= TERMINAL STYLE ================= */
+/* ================= TERMINAL ================= */
 
 .terminal{
 background:#000;
@@ -236,9 +250,9 @@ nav{flex-direction:column;gap:1rem;}
 
 </style>
 </head>
+
 <body>
 
-<!-- Floating Particles -->
 <script>
 for(let i=0;i<30;i++){
 let particle=document.createElement("div");
@@ -254,7 +268,8 @@ document.body.appendChild(particle);
 <h2>AI SYSTEMS LAB</h2>
 <ul>
 <li><a href="#mission">Mission</a></li>
-<li><a href="#builds">Builds</a></li>
+<li><a href="#builds">Systems</a></li>
+<li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -284,7 +299,6 @@ limited resources, imperfect workflows, real human friction.</p>
 </div>
 
 </div>
-
 </section>
 
 <section id="builds">
@@ -293,9 +307,9 @@ limited resources, imperfect workflows, real human friction.</p>
 <div class="card">
 <h3>Shift Tracker</h3>
 
-<p><strong>Problem:</strong> Workers in small businesses often calculate work hours and pay manually.</p>
+<p><strong>Problem:</strong> Workers in small businesses often calculate work hours manually.</p>
 
-<p><strong>Solution:</strong> A simple system that records shift start time, end time, break duration and automatically calculates weekly pay.</p>
+<p><strong>Solution:</strong> A system that records shifts and automatically calculates pay.</p>
 
 <p><strong>Status:</strong> Launching on Google Play.</p>
 
@@ -309,14 +323,13 @@ Privacy Policy
 
 </div>
 
-
 <div class="card">
 
 <h3>Palper – Secure Vault</h3>
 
 <p><strong>Problem:</strong> People forget complex passwords and store them insecurely.</p>
 
-<p><strong>Solution:</strong> A secure vault protected by device biometrics to store sensitive credentials safely.</p>
+<p><strong>Solution:</strong> A biometric-protected vault for sensitive credentials.</p>
 
 <p><strong>Status:</strong> Launching on Google Play.</p>
 
@@ -330,20 +343,19 @@ Privacy Policy
 
 </div>
 
-<section class="systems">
+</section>
 
-<h2>Futuristic Projects In Progress</h2>
+<section id="projects">
+
+<h2 class="section-title">Futuristic Projects In Progress</h2>
 
 <div class="card">
 
 <h3>Andhe Ki Lathi</h3>
-  <span class="status">STATUS: PROTOTYPE DEVELOPMENT</span>
-
+<span class="status">PROTOTYPE DEVELOPMENT</span>
 
 <p>
-While working and observing everyday life, I came across someone who could not see,
-but could hear perfectly. Watching how difficult it was for them to navigate simple
-environments made me think about a question:
+While observing everyday life, I came across someone who could not see but could hear perfectly. Watching how difficult it was for them to navigate simple environments raised a question:
 </p>
 
 <p>
@@ -351,24 +363,11 @@ What if a system could translate vision into sound in real time?
 </p>
 
 <p>
-That moment led to the idea of <strong>Andhe Ki Lathi</strong> — an assistive
-AI-powered wearable device designed to help visually impaired individuals
-understand their surroundings through intelligent audio feedback.
+This led to the idea of <strong>Andhe Ki Lathi</strong> — an AI-powered wearable designed to help visually impaired individuals understand their surroundings through intelligent audio feedback.
 </p>
 
 <p>
-The system uses computer vision and AI models to detect objects,
-describe scenes, and guide users safely through environments.
-</p>
-
-<p>
-The first prototype is being developed as a compact wearable device
-that sits around the neck, continuously analyzing the environment
-and narrating important information to the user.
-</p>
-
-<p>
-This project is currently in active development.
+The system uses computer vision to detect objects, analyze scenes, and narrate environmental information to the user.
 </p>
 
 <a class="btn primary" href="https://ankushgupta29210.github.io/andhe-ki-lathi/" target="_blank">
@@ -376,13 +375,6 @@ View Project
 </a>
 
 </div>
-
-</section>
-
-
-
-
-  
 
 </section>
 
@@ -402,8 +394,3 @@ View Project
 
 </body>
 </html>
-
-
-
-
-
